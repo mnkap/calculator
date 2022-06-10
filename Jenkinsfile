@@ -19,6 +19,7 @@ stage("Code coverage") {
  reportDir: 'build/reports/jacoco/test/html',
  reportFiles: 'index.html',
  reportName: "JaCoCo Report"
+ reportName: "Checkstyle Report"
  ])
  sh "./gradlew jacocoTestCoverageVerification"
  }
