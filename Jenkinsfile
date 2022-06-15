@@ -37,7 +37,7 @@ stage("Package") {
 
 stage("Docker build") {
  steps {
- sh "docker build -t gbt1/calculator ."
+ sh "/usr/bin/docker build -t gbt1/calculator ."
  }
 }
 
