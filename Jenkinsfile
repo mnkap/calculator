@@ -37,7 +37,7 @@ stage("Package") {
  }
 }
 
-stage(Docker run) {
+stage("Docker run") {
 sh "docker run -t -v /var/run/docker.sock:/var/run/docker.sock gbt1/docker_agent"
 }
 stage("Docker build") {
