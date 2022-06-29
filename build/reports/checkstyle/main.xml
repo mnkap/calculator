@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<checkstyle version="8.37">
-<file name="/home/ubuntu2/calc/calculator/src/main/java/com/mnkap/calculator/Calculator.java">
-</file>
-<file name="/home/ubuntu2/calc/calculator/src/main/java/com/mnkap/calculator/CalculatorController.java">
-</file>
-<file name="/home/ubuntu2/calc/calculator/src/main/java/com/mnkap/calculator/MnkapApplication.java">
-</file>
-</checkstyle>

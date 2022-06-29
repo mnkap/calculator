@@ -4,6 +4,7 @@ plugins {
 	id 'java'
 	id 'jacoco'
  	id 'checkstyle'
+        
 }
 
 group = 'com.mnkap'
@@ -18,10 +19,20 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'junit:junit:4.13'
+        testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.0.0'
+	
+        implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.0.0'
+	implementation 'com.hazelcast:hazelcast'
 }
+
+tasks.register('acceptanceTest', Test) {
+ include '**/acceptance/**'
+ systemProperties System.getProperties()
+ }
 
 tasks.named('test') {
 	useJUnitPlatform()
+	exclude '**/acceptance/**'
 }
 
 jacocoTestCoverageVerification {
